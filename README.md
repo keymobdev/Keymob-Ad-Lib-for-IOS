@@ -11,14 +11,14 @@ Free choice of storage location and loading configuration files, avoid configura
 ## Usage
 
 ### 1. Download and install the library files
-    Download keymob library KeymobAd.framework,  add it to the library path of android project<br/>
-    Download advertising platform libraries, keymob supports many platforms, but only need to add your own advertising platform library used to xcode project.<br/>
+  Download keymob library KeymobAd.framework,  add it to the library path of android project<br/>
+  Download advertising platform libraries, keymob supports many platforms, but only need to add your own advertising platform library used to xcode project.<br/>
    The following are the library files of each advertising platform<br/>
-   admob： GoogleMobileAds.framework<br/>
-   amazon:  AmazonAd.framework,AmazonInsightsSDK.framework<br/>
-   chartboost: cbsdk<br/>
-   mmedia：  MillennialMedia.framework,SpeechKit.framework<br/>
-   inmobi:  immobi<br/>
+   * admob： GoogleMobileAds.framework<br/>
+   * amazon:  AmazonAd.framework,AmazonInsightsSDK.framework<br/>
+   * chartboost: cbsdk<br/>
+   * mmedia：  MillennialMedia.framework,SpeechKit.framework<br/>
+   * inmobi:  immobi<br/>
 ### 2.Add Code
 #### a.add import
 ```
@@ -48,7 +48,7 @@ The above means that displays the standard banner ad at the bottom of the device
 ```	
 	[adapter showBannerABS:BANNER_SIZE_BANNER atX:10 atY:200];
 ```
-    The above code is display standard banner at point(0,200)<br/>
+The above code is display standard banner at point(0,200)<br/>
      Although the relative positioning to meet the needs of the majority of advertising location settings, but to meet the needs of some special position, keymob provides absolute fixed position display banner advertising api.<br/>
      The first parameter is the size of the banner, the second argument and third parameters are the position x and y values of banner.<br/>
 

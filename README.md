@@ -11,7 +11,7 @@ Free choice of storage location and loading configuration files, avoid configura
 ## Usage
 
 ### 1. Download and install the library files
-  Download keymob library KeymobAd.framework,  add it to the library path of android project<br/>
+  Download keymob library KeymobAd.framework,  add it to the library path of ios project<br/>
   Download advertising platform libraries, keymob supports many platforms, but only need to add your own advertising platform library used to xcode project.<br/>
    The following are the library files of each advertising platform<br/>
    * admob： GoogleMobileAds.framework<br/>
@@ -140,5 +140,5 @@ The above code is display standard banner at point(0,200)<br/>
 Depending rate model rate will become the sort number or proportion.All keyName in config can not been modified."adapter" can not be modified and "types" can not be modified. "adapter", said platform implement, types indicates that the platform supports the type of ad.<br/>
 Using the platform of you  choice, delete unused platform. You can also add your own platforms, then config in the list. Create your own advertising platform extensions tutorials will gradually improve later.<br/>
 
-project home https://github.com/keymobdev/-Keymob-Ad-Lib-for-IOS
+project home https://github.com/keymobdev/-Keymob-Ad-Lib-for-IOS <br/>
 android home https://github.com/keymobdev/Ad-Network-Mediation-lib-for-android

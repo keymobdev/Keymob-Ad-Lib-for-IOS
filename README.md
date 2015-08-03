@@ -11,8 +11,8 @@ json profile can put in their own web server or third-party management platform 
 ## Usage
 
 ### 1. Download and install the library files
-       Download Keymob sdk,Delete plugins from keymobsdk\plugins  that you not plan to use,add keymobsdk  folder to Xcode project 
-    Add Other Linker Flag in Xcode, to load the platform libraries are added, such as the use of Admob and Inmobi you need to add two linker flag
+Download Keymob sdk,Delete plugins from keymobsdk\plugins  that you not plan to use,add keymobsdk  folder to Xcode project 
+Add Other Linker Flag in Xcode, to load the platform libraries are added, such as the use of Admob and Inmobi you need to add two linker flag
 ```
        -force_load $(SRCROOT)/keymobsdk/plugins/Admob/libAdmobAdapter.a
       -force_load $(SRCROOT)/keymobsdk/plugins/inmobi/libInmobiAdapter.a

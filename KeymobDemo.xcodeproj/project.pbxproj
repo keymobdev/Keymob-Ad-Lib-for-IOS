@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE0E41D51B10830500E55E05 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EE0E41D41B10830500E55E05 /* libz.dylib */; };
+		EE57D6121B0F6CAA00A86DA1 /* ads.json in Resources */ = {isa = PBXBuildFile; fileRef = EE57D6111B0F67DC00A86DA1 /* ads.json */; };
+		EE629FF91AF24B6C00267D13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE629FF81AF24B6C00267D13 /* main.m */; };
+		EE629FFC1AF24B6C00267D13 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE629FFB1AF24B6C00267D13 /* AppDelegate.m */; };
+		EE629FFF1AF24B6C00267D13 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE629FFE1AF24B6C00267D13 /* ViewController.m */; };
+		EE62A0021AF24B6C00267D13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE62A0001AF24B6C00267D13 /* Main.storyboard */; };
+		EE62A0041AF24B6C00267D13 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE62A0031AF24B6C00267D13 /* Images.xcassets */; };
+		EE62A0071AF24B6C00267D13 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE62A0051AF24B6C00267D13 /* LaunchScreen.xib */; };
+		EE7ACFF51B569264000F98F3 /* libBaiduAdapter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE7ACFF41B569264000F98F3 /* libBaiduAdapter.a */; };
+		EE7ACFF71B569326000F98F3 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE7ACFF61B569326000F98F3 /* CoreMotion.framework */; };
+		EE9E0E4C1B0C88AD005F89FF /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EE9E0E4B1B0C88AD005F89FF /* libsqlite3.dylib */; };
+		EEE01C141B0DA90B00369AD1 /* AdListener.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE01C131B0DA90B00369AD1 /* AdListener.m */; };
+		EEE1E8B31B4A67A000DCDE70 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE1E8B21B4A67A000DCDE70 /* CoreLocation.framework */; };
+		EEE1E97D1B4A830E00DCDE70 /* KeymobAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE1E9671B4A830E00DCDE70 /* KeymobAd.framework */; };
+		EEE1E97E1B4A830E00DCDE70 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE1E96B1B4A830E00DCDE70 /* GoogleMobileAds.framework */; };
+		EEE1E97F1B4A830E00DCDE70 /* libAdmobAdapter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE1E96C1B4A830E00DCDE70 /* libAdmobAdapter.a */; };
+		EEE1E9801B4A830E00DCDE70 /* AmazonAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE1E96E1B4A830E00DCDE70 /* AmazonAd.framework */; };
+		EEE1E9811B4A830E00DCDE70 /* AmazonInsightsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE1E9701B4A830E00DCDE70 /* AmazonInsightsSDK.framework */; };
+		EEE1E9821B4A830E00DCDE70 /* libAmazonAdapter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE1E9711B4A830E00DCDE70 /* libAmazonAdapter.a */; };
+		EEE1E9831B4A830E00DCDE70 /* Chartboost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE1E9731B4A830E00DCDE70 /* Chartboost.framework */; };
+		EEE1E9841B4A830E00DCDE70 /* libChartboostAdapter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE1E9751B4A830E00DCDE70 /* libChartboostAdapter.a */; };
+		EEE1E9851B4A830E00DCDE70 /* libInmobiAdapter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE1E9781B4A830E00DCDE70 /* libInmobiAdapter.a */; };
+		EEE1E9861B4A830E00DCDE70 /* libMMediaAdapter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE1E97A1B4A830E00DCDE70 /* libMMediaAdapter.a */; };
+		EEE1E9871B4A830E00DCDE70 /* MillennialMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE1E97B1B4A830E00DCDE70 /* MillennialMedia.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EE0E41D41B10830500E55E05 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		EE57D6111B0F67DC00A86DA1 /* ads.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ads.json; sourceTree = "<group>"; };
+		EE629FF31AF24B6C00267D13 /* KeymobDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeymobDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE629FF71AF24B6C00267D13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE629FF81AF24B6C00267D13 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EE629FFA1AF24B6C00267D13 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EE629FFB1AF24B6C00267D13 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EE629FFD1AF24B6C00267D13 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EE629FFE1AF24B6C00267D13 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EE62A0011AF24B6C00267D13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE62A0031AF24B6C00267D13 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EE62A0061AF24B6C00267D13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		EE7ACFF11B569264000F98F3 /* BaiduAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduAdapter.h; sourceTree = "<group>"; };
+		EE7ACFF21B569264000F98F3 /* BaiduMobAdInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMobAdInterstitialDelegate.h; sourceTree = "<group>"; };
+		EE7ACFF31B569264000F98F3 /* BaiduMobAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaiduMobAdView.h; sourceTree = "<group>"; };
+		EE7ACFF41B569264000F98F3 /* libBaiduAdapter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBaiduAdapter.a; sourceTree = "<group>"; };
+		EE7ACFF61B569326000F98F3 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		EE9E0E4B1B0C88AD005F89FF /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		EEE01C121B0DA90B00369AD1 /* AdListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdListener.h; sourceTree = "<group>"; };
+		EEE01C131B0DA90B00369AD1 /* AdListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdListener.m; sourceTree = "<group>"; };
+		EEE1E8B21B4A67A000DCDE70 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EEE1E9671B4A830E00DCDE70 /* KeymobAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KeymobAd.framework; sourceTree = "<group>"; };
+		EEE1E96A1B4A830E00DCDE70 /* AdmobAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdmobAdapter.h; sourceTree = "<group>"; };
+		EEE1E96B1B4A830E00DCDE70 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		EEE1E96C1B4A830E00DCDE70 /* libAdmobAdapter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdmobAdapter.a; sourceTree = "<group>"; };
+		EEE1E96E1B4A830E00DCDE70 /* AmazonAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AmazonAd.framework; sourceTree = "<group>"; };
+		EEE1E96F1B4A830E00DCDE70 /* AmazonAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmazonAdapter.h; sourceTree = "<group>"; };
+		EEE1E9701B4A830E00DCDE70 /* AmazonInsightsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AmazonInsightsSDK.framework; sourceTree = "<group>"; };
+		EEE1E9711B4A830E00DCDE70 /* libAmazonAdapter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAmazonAdapter.a; sourceTree = "<group>"; };
+		EEE1E9731B4A830E00DCDE70 /* Chartboost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Chartboost.framework; sourceTree = "<group>"; };
+		EEE1E9741B4A830E00DCDE70 /* ChartboostAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartboostAdapter.h; sourceTree = "<group>"; };
+		EEE1E9751B4A830E00DCDE70 /* libChartboostAdapter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libChartboostAdapter.a; sourceTree = "<group>"; };
+		EEE1E9771B4A830E00DCDE70 /* InmobiAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InmobiAdapter.h; sourceTree = "<group>"; };
+		EEE1E9781B4A830E00DCDE70 /* libInmobiAdapter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libInmobiAdapter.a; sourceTree = "<group>"; };
+		EEE1E97A1B4A830E00DCDE70 /* libMMediaAdapter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMMediaAdapter.a; sourceTree = "<group>"; };
+		EEE1E97B1B4A830E00DCDE70 /* MillennialMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MillennialMedia.framework; sourceTree = "<group>"; };
+		EEE1E97C1B4A830E00DCDE70 /* MMediaAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMediaAdapter.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE629FF01AF24B6C00267D13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE7ACFF71B569326000F98F3 /* CoreMotion.framework in Frameworks */,
+				EEE1E9811B4A830E00DCDE70 /* AmazonInsightsSDK.framework in Frameworks */,
+				EEE1E8B31B4A67A000DCDE70 /* CoreLocation.framework in Frameworks */,
+				EEE1E9801B4A830E00DCDE70 /* AmazonAd.framework in Frameworks */,
+				EE0E41D51B10830500E55E05 /* libz.dylib in Frameworks */,
+				EEE1E9861B4A830E00DCDE70 /* libMMediaAdapter.a in Frameworks */,
+				EEE1E9821B4A830E00DCDE70 /* libAmazonAdapter.a in Frameworks */,
+				EEE1E9871B4A830E00DCDE70 /* MillennialMedia.framework in Frameworks */,
+				EEE1E9831B4A830E00DCDE70 /* Chartboost.framework in Frameworks */,
+				EEE1E97E1B4A830E00DCDE70 /* GoogleMobileAds.framework in Frameworks */,
+				EEE1E97F1B4A830E00DCDE70 /* libAdmobAdapter.a in Frameworks */,
+				EEE1E9841B4A830E00DCDE70 /* libChartboostAdapter.a in Frameworks */,
+				EEE1E97D1B4A830E00DCDE70 /* KeymobAd.framework in Frameworks */,
+				EE7ACFF51B569264000F98F3 /* libBaiduAdapter.a in Frameworks */,
+				EE9E0E4C1B0C88AD005F89FF /* libsqlite3.dylib in Frameworks */,
+				EEE1E9851B4A830E00DCDE70 /* libInmobiAdapter.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE629FEA1AF24B6C00267D13 = {
+			isa = PBXGroup;
+			children = (
+				EE7ACFF61B569326000F98F3 /* CoreMotion.framework */,
+				EEE1E9661B4A830E00DCDE70 /* keymobsdk */,
+				EEE1E8B21B4A67A000DCDE70 /* CoreLocation.framework */,
+				EE0E41D41B10830500E55E05 /* libz.dylib */,
+				EE9E0E4B1B0C88AD005F89FF /* libsqlite3.dylib */,
+				EE629FF51AF24B6C00267D13 /* KeymobDemo */,
+				EE629FF41AF24B6C00267D13 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE629FF41AF24B6C00267D13 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE629FF31AF24B6C00267D13 /* KeymobDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE629FF51AF24B6C00267D13 /* KeymobDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EE629FFA1AF24B6C00267D13 /* AppDelegate.h */,
+				EE629FFB1AF24B6C00267D13 /* AppDelegate.m */,
+				EE629FFD1AF24B6C00267D13 /* ViewController.h */,
+				EE629FFE1AF24B6C00267D13 /* ViewController.m */,
+				EE62A0001AF24B6C00267D13 /* Main.storyboard */,
+				EE62A0031AF24B6C00267D13 /* Images.xcassets */,
+				EE62A0051AF24B6C00267D13 /* LaunchScreen.xib */,
+				EE629FF61AF24B6C00267D13 /* Supporting Files */,
+				EEE01C121B0DA90B00369AD1 /* AdListener.h */,
+				EEE01C131B0DA90B00369AD1 /* AdListener.m */,
+				EE57D6111B0F67DC00A86DA1 /* ads.json */,
+			);
+			path = KeymobDemo;
+			sourceTree = "<group>";
+		};
+		EE629FF61AF24B6C00267D13 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE629FF71AF24B6C00267D13 /* Info.plist */,
+				EE629FF81AF24B6C00267D13 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EE7ACFF01B569264000F98F3 /* Baidu */ = {
+			isa = PBXGroup;
+			children = (
+				EE7ACFF11B569264000F98F3 /* BaiduAdapter.h */,
+				EE7ACFF21B569264000F98F3 /* BaiduMobAdInterstitialDelegate.h */,
+				EE7ACFF31B569264000F98F3 /* BaiduMobAdView.h */,
+				EE7ACFF41B569264000F98F3 /* libBaiduAdapter.a */,
+			);
+			path = Baidu;
+			sourceTree = "<group>";
+		};
+		EEE1E9661B4A830E00DCDE70 /* keymobsdk */ = {
+			isa = PBXGroup;
+			children = (
+				EEE1E9671B4A830E00DCDE70 /* KeymobAd.framework */,
+				EEE1E9681B4A830E00DCDE70 /* plugins */,
+			);
+			path = keymobsdk;
+			sourceTree = "<group>";
+		};
+		EEE1E9681B4A830E00DCDE70 /* plugins */ = {
+			isa = PBXGroup;
+			children = (
+				EE7ACFF01B569264000F98F3 /* Baidu */,
+				EEE1E9691B4A830E00DCDE70 /* Admob */,
+				EEE1E96D1B4A830E00DCDE70 /* Amazon */,
+				EEE1E9721B4A830E00DCDE70 /* Chartboost */,
+				EEE1E9761B4A830E00DCDE70 /* inmobi */,
+				EEE1E9791B4A830E00DCDE70 /* MMedia */,
+			);
+			path = plugins;
+			sourceTree = "<group>";
+		};
+		EEE1E9691B4A830E00DCDE70 /* Admob */ = {
+			isa = PBXGroup;
+			children = (
+				EEE1E96A1B4A830E00DCDE70 /* AdmobAdapter.h */,
+				EEE1E96B1B4A830E00DCDE70 /* GoogleMobileAds.framework */,
+				EEE1E96C1B4A830E00DCDE70 /* libAdmobAdapter.a */,
+			);
+			path = Admob;
+			sourceTree = "<group>";
+		};
+		EEE1E96D1B4A830E00DCDE70 /* Amazon */ = {
+			isa = PBXGroup;
+			children = (
+				EEE1E96E1B4A830E00DCDE70 /* AmazonAd.framework */,
+				EEE1E96F1B4A830E00DCDE70 /* AmazonAdapter.h */,
+				EEE1E9701B4A830E00DCDE70 /* AmazonInsightsSDK.framework */,
+				EEE1E9711B4A830E00DCDE70 /* libAmazonAdapter.a */,
+			);
+			path = Amazon;
+			sourceTree = "<group>";
+		};
+		EEE1E9721B4A830E00DCDE70 /* Chartboost */ = {
+			isa = PBXGroup;
+			children = (
+				EEE1E9731B4A830E00DCDE70 /* Chartboost.framework */,
+				EEE1E9741B4A830E00DCDE70 /* ChartboostAdapter.h */,
+				EEE1E9751B4A830E00DCDE70 /* libChartboostAdapter.a */,
+			);
+			path = Chartboost;
+			sourceTree = "<group>";
+		};
+		EEE1E9761B4A830E00DCDE70 /* inmobi */ = {
+			isa = PBXGroup;
+			children = (
+				EEE1E9771B4A830E00DCDE70 /* InmobiAdapter.h */,
+				EEE1E9781B4A830E00DCDE70 /* libInmobiAdapter.a */,
+			);
+			path = inmobi;
+			sourceTree = "<group>";
+		};
+		EEE1E9791B4A830E00DCDE70 /* MMedia */ = {
+			isa = PBXGroup;
+			children = (
+				EEE1E97A1B4A830E00DCDE70 /* libMMediaAdapter.a */,
+				EEE1E97B1B4A830E00DCDE70 /* MillennialMedia.framework */,
+				EEE1E97C1B4A830E00DCDE70 /* MMediaAdapter.h */,
+			);
+			path = MMedia;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE629FF21AF24B6C00267D13 /* KeymobDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE62A0161AF24B6C00267D13 /* Build configuration list for PBXNativeTarget "KeymobDemo" */;
+			buildPhases = (
+				EE629FEF1AF24B6C00267D13 /* Sources */,
+				EE629FF01AF24B6C00267D13 /* Frameworks */,
+				EE629FF11AF24B6C00267D13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KeymobDemo;
+			productName = KeymobDemo;
+			productReference = EE629FF31AF24B6C00267D13 /* KeymobDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE629FEB1AF24B6C00267D13 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = keymob;
+				TargetAttributes = {
+					EE629FF21AF24B6C00267D13 = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 57W66QZCMN;
+					};
+				};
+			};
+			buildConfigurationList = EE629FEE1AF24B6C00267D13 /* Build configuration list for PBXProject "KeymobDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE629FEA1AF24B6C00267D13;
+			productRefGroup = EE629FF41AF24B6C00267D13 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE629FF21AF24B6C00267D13 /* KeymobDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE629FF11AF24B6C00267D13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE57D6121B0F6CAA00A86DA1 /* ads.json in Resources */,
+				EE62A0021AF24B6C00267D13 /* Main.storyboard in Resources */,
+				EE62A0071AF24B6C00267D13 /* LaunchScreen.xib in Resources */,
+				EE62A0041AF24B6C00267D13 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE629FEF1AF24B6C00267D13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE629FFF1AF24B6C00267D13 /* ViewController.m in Sources */,
+				EE629FFC1AF24B6C00267D13 /* AppDelegate.m in Sources */,
+				EEE01C141B0DA90B00369AD1 /* AdListener.m in Sources */,
+				EE629FF91AF24B6C00267D13 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EE62A0001AF24B6C00267D13 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE62A0011AF24B6C00267D13 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE62A0051AF24B6C00267D13 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE62A0061AF24B6C00267D13 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE62A0141AF24B6C00267D13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE62A0151AF24B6C00267D13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE62A0171AF24B6C00267D13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEAD_CODE_STRIPPING = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/keymobsdk",
+					"$(PROJECT_DIR)/keymobsdk/plugins/Admob",
+					"$(PROJECT_DIR)/keymobsdk/plugins/Amazon",
+					"$(PROJECT_DIR)/keymobsdk/plugins/Chartboost",
+					"$(PROJECT_DIR)/keymobsdk/plugins/MMedia",
+				);
+				INFOPLIST_FILE = KeymobDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/keymobsdk/plugins/Admob",
+					"$(PROJECT_DIR)/keymobsdk/plugins/Amazon",
+					"$(PROJECT_DIR)/keymobsdk/plugins/Chartboost",
+					"$(PROJECT_DIR)/keymobsdk/plugins/inmobi",
+					"$(PROJECT_DIR)/keymobsdk/plugins/MMedia",
+					"$(PROJECT_DIR)/keymobsdk/plugins/Baidu",
+				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"\"$(SRCROOT)/keymobsdk/plugins/Admob/libAdmobAdapter.a\"",
+					"-force_load",
+					"\"$(SRCROOT)/keymobsdk/plugins/Amazon/libAmazonAdapter.a\"",
+					"-force_load",
+					"\"$(SRCROOT)/keymobsdk/plugins/inmobi/libInmobiAdapter.a\"",
+					"-force_load",
+					"\"$(SRCROOT)/keymobsdk/plugins/Chartboost/libChartboostAdapter.a\"",
+					"-force_load",
+					"\"$(SRCROOT)/keymobsdk/plugins/MMedia/libMMediaAdapter.a\"",
+					"-force_load",
+					"\"$(SRCROOT)/keymobsdk/plugins/Baidu/libBaiduAdapter.a\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EE62A0181AF24B6C00267D13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEAD_CODE_STRIPPING = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/keymobsdk",
+					"$(PROJECT_DIR)/keymobsdk/plugins/Admob",
+					"$(PROJECT_DIR)/keymobsdk/plugins/Amazon",
+					"$(PROJECT_DIR)/keymobsdk/plugins/Chartboost",
+					"$(PROJECT_DIR)/keymobsdk/plugins/MMedia",
+				);
+				INFOPLIST_FILE = KeymobDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/keymobsdk/plugins/Admob",
+					"$(PROJECT_DIR)/keymobsdk/plugins/Amazon",
+					"$(PROJECT_DIR)/keymobsdk/plugins/Chartboost",
+					"$(PROJECT_DIR)/keymobsdk/plugins/inmobi",
+					"$(PROJECT_DIR)/keymobsdk/plugins/MMedia",
+					"$(PROJECT_DIR)/keymobsdk/plugins/Baidu",
+				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"\"$(SRCROOT)/keymobsdk/plugins/Admob/libAdmobAdapter.a\"",
+					"-force_load",
+					"\"$(SRCROOT)/keymobsdk/plugins/Amazon/libAmazonAdapter.a\"",
+					"-force_load",
+					"\"$(SRCROOT)/keymobsdk/plugins/inmobi/libInmobiAdapter.a\"",
+					"-force_load",
+					"\"$(SRCROOT)/keymobsdk/plugins/Chartboost/libChartboostAdapter.a\"",
+					"-force_load",
+					"\"$(SRCROOT)/keymobsdk/plugins/MMedia/libMMediaAdapter.a\"",
+					"-force_load",
+					"\"$(SRCROOT)/keymobsdk/plugins/Baidu/libBaiduAdapter.a\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE629FEE1AF24B6C00267D13 /* Build configuration list for PBXProject "KeymobDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE62A0141AF24B6C00267D13 /* Debug */,
+				EE62A0151AF24B6C00267D13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE62A0161AF24B6C00267D13 /* Build configuration list for PBXNativeTarget "KeymobDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE62A0171AF24B6C00267D13 /* Debug */,
+				EE62A0181AF24B6C00267D13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE629FEB1AF24B6C00267D13 /* Project object */;
+}

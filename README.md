@@ -1,9 +1,8 @@
-# keymob is an easy-to-use advertising management library
-Keymob is used to  manage  ad advertising platforms of mobile applications, including ad impressions which platforms, the proportion of each platform, and other priorities.<br/>
-Support admob, chartboost, inmobi,mmedia, amazon, iad and baidu by default,other common advertising platform will been  supported based on  feedback.<br/>
-Support rich forms of advertising, including the current popular advertising banner with variety of sizes, rectange ads, Interstitial ads, video ads, more-app ad.<br/>
-You can config and manage ad platform in www.keymob.com or Config the ad ID , proportion, rate in json format file.<br/>
-json profile can put in their own web server or third-party management platform server.<br/>
+### Keymob is a simple lib to manage ad 
+Keymob can be very easy to use management  various advertising platforms in application, including which platform ad impressions, the proportion of each platform, setting priorities.<br/>
+Support admob, chartboost, inmobi.mmedia, amazon, iad, baidu and other common advertising platform, more  platforms will been supported.<br/>
+Support rich forms of advertising, including the popular  banner  a variety of sizes, rect ads, Interstitial ads, video ads, More APP Ad.<br/>
+Ad config can been managed in  www.keymob.com ,  modify and adjust easy, you can config keymob with json format file , and then put it in  the project or on the website.<br/>
 
 
 

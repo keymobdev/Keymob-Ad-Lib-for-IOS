@@ -1,7 +1,6 @@
 #import "ViewController.h"
 #import "AdListener.h"
 #import <KeymobAd/KeymobAd.h>
-#import "ChartboostAdapter.h"
 @interface ViewController ()
 {
     AdManager* adManager;
@@ -22,7 +21,7 @@
        [self configAdFromKeymobService];
 }
 -(void) configAdFromKeymobService{
-    [adManager configWithKeymobService:@"1" isTesting:YES];//if you are debugging ,set no if you are publish 
+    [adManager configWithKeymobService:@"1" isTesting:YES];//if you are debugging ,set auto cache no
 }
 -(void) configAdFromFile{
     NSError* error;

@@ -10,18 +10,19 @@ Ad config can been managed in  www.keymob.com ,  modify and adjust easy, you can
 ## Usage
 
 ### 1. Download and install the library files
-To show ads on mobile application which needs to  added ad library in the application, the current version of Keymob advertisement  library is 20150801 .the current version Keymob advertising management library is 20,150,801. Keymob library is an ios project, most of the general ios project file, the following resources are Keymob related resources.
+To show ads on mobile application which needs to  added ad library in the application, the current version of Keymob advertisement  library is 20150801 . Keymob library is an ios project, most of it are  general ios project files, the following resources are Keymob related resources.
 * README.md keymob English quickly integrate document
 * README_ios_zh.md keymob Chinese quickly integrate document
 * keymobsdk\KeymobAd.framework keymob core libraries
-* keymobsdk\plugins keymob supported third-part platform SDK librarys
+* keymobsdk\plugins keymob supported third-part platform SDK librarys<br/>
 Without having to add a separate code for each platform after add keymob sdk.
 
 Adding advertising management library  steps
 * Right-click the xcode project, open the properties, select "Add File to Project" menu, add the directory "keymobsdk" to the Xcode project 
 * Add Other Linker Flags value -fore_load
-Other Linker Flags value which added items in the build tab -fore_load
+Other Linker Flags value which added items in the build tab -fore_load<br/>
 Such as the use of Admob and Inmobi need to add the following items. Suppose "$ (SRCROOT) / keymobsdk / plugins / Admob" is the library path
+
 ```
 -force_load $ (SRCROOT) /keymobsdk/plugins/Admob/libAdmobAdapter.a
 -force_load $ (SRCROOT) /keymobsdk/plugins/inmobi/libInmobiAdapter.a

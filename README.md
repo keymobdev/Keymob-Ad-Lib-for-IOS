@@ -10,12 +10,24 @@ Ad config can been managed in  www.keymob.com ,  modify and adjust easy, you can
 ## Usage
 
 ### 1. Download and install the library files
-Download Keymob sdk,Delete plugins from keymobsdk\plugins  that you not plan to use,add keymobsdk  folder to Xcode project 
-Add Other Linker Flag in Xcode, to load the platform libraries are added, such as the use of Admob and Inmobi you need to add two linker flag
+To show ads on mobile application which needs to  added ad library in the application, the current version of Keymob advertisement  library is 20150801 .the current version Keymob advertising management library is 20,150,801. Keymob library is an ios project, most of the general ios project file, the following resources are Keymob related resources.
+* README.md keymob English quickly integrate document
+* README_ios_zh.md keymob Chinese quickly integrate document
+* keymobsdk\KeymobAd.framework keymob core libraries
+* keymobsdk\plugins keymob supported third-part platform SDK librarys
+Without having to add a separate code for each platform after add keymob sdk.
+
+Adding advertising management library  steps
+* Right-click the xcode project, open the properties, select "Add File to Project" menu, add the directory "keymobsdk" to the Xcode project 
+* Add Other Linker Flags value -fore_load
+Other Linker Flags value which added items in the build tab -fore_load
+Such as the use of Admob and Inmobi need to add the following items. Suppose "$ (SRCROOT) / keymobsdk / plugins / Admob" is the library path
 ```
-       -force_load $(SRCROOT)/keymobsdk/plugins/Admob/libAdmobAdapter.a
-      -force_load $(SRCROOT)/keymobsdk/plugins/inmobi/libInmobiAdapter.a
+-force_load $ (SRCROOT) /keymobsdk/plugins/Admob/libAdmobAdapter.a
+-force_load $ (SRCROOT) /keymobsdk/plugins/inmobi/libInmobiAdapter.a
 ```
+Note: If you do not add -force_load, will not show ads, log out message" not support platform"
+
 ### 2.Add Code
 
 #### a.add import
@@ -130,19 +142,21 @@ The above code is display standard banner at point(0,200)<br/>
 
 ### 3.Advertising platform configuration file template
 ```
-{
-    "isTesting":true,//Whether it is in test mode 
-    "rateModel":1,////0 said priority is  represents the weight of each platform ,1 said the priority is the order of each platform to display ads
-    "platforms":[
-                 {"class":"AdmobAdapter","priority":10,"key1":"ca-app-pub-xxx/xxx","key2":"ca-app-pub-xxx/xxx"},//admob  ,key1 banner ID，key2 Interstitial ID
-                 {"class":"AmazonAdapter","priority":10,"key1":"app id"},//amazon  ,key1 appkey
-                 {"class":"ChartboostAdapter","priority":3,"key1":"appid ","key2":"sign"},//chartboost  ,key1 appID，key2 signature
-                 {"class":"InmobiAdapter","priority":10,"key1":"property id"},//inmobi  ,key1 appid 
-                 {"class":"MMediaAdapter","priority":10,"key1":"banner id","key2":"Interstitial ID"},//mmedia  ,key1 banner ID，key2 Interstitial id
-                 {"class":"KeymobAdapter","priority":10,"key1":"1"},//keymob.com home Ad and exchange ID
-                 {"class":"IadAdapter","priority":10}//iad  
-                ]
-}
+	{
+		"isTesting":true,//Whether it is in test mode
+		"rateModel":1,//0 said priority is  represents the weight of each platform ,1 said the priority is the order of each platform to display ads
+		"platforms":[
+		{"class":"AdmobAdapter","priority":10,"key1":"ca-app-pub-xxx/xxx","key2":"ca-app-pub-xxx/xxx"},//admob  ,key1 banner ID，key2 Interstitial id
+		{"class":"BaiduAdapter","priority":10,"key1":"apid","key2":"apsec"},//baidu platform,key1 and key2 is the same value
+		{"class":"AmazonAdapter","priority":10,"key1":"xxx"},//amazon ,key1 appkey
+		{"class":"ChartboostAdapter","priority":10,"key1":"xxx","key2":"xxx"},//chartboost ,key1 appID，key2 signature
+		{"class":"InmobiAdapter","priority":10,"key1":"xxx"},//inmobi ,key1 appid 
+		{"class":"IadAdapter","priority":10,"key1":"appid"},//iad ,will be automatically ignored on android
+		{"class":"GDTAdapter","priority":10,"key1":"appid","key2":"banner id","param":"Interstitial ID"},//gdt platform
+		{"class":"AdcolonyAdapter","priority":10,"key1":"appid","key2":"zone interstitia","param":"video zone"},//adcolony platform
+		{"class":"MMediaAdapter","priority":10,"key1":"xxx","key2":"xxx"}//mmedia ,key1 banner apID，key2 Interstitial apid
+		]
+	}
 ```
 Depending rate model priority will become the sort number or proportion.All keyName in config can not been modified."class" is platform implement can not be modified<br/>
 

@@ -1,6 +1,6 @@
-keymob 是一个简单易用的离线广告管理库。
+keymob 是一个简单易用的广告管理库。
 使用keymob能非常方便的管理应用中各个广告平台的广告，包括展示哪些平台的广告，各个平台的比例，优先顺序等。
-支持admob,baidu,chartboost,inmobi.mmedia,amazon,iad等常用广告平台，后面会根据大家的反馈加入更多的常见平台的支持。
+支持admob,baidu,chartboost,inmobi.mmedia,amazon,iad,广点通，adcolony等常用广告平台，后面会根据大家的反馈加入更多的常见平台的支持。
 广告形式支持丰富，包括各种尺寸的banner广告，方块广告，全屏广告，视频广告，应用墙广告等当前流行的广告。
 开发者可以通过www.keymob.com 远程配置管理各个广告平台的广告ID
 也可以使用时把各个平台的广告ID和比例优先级顺序等信息按json格式配置，初始化keymob库 ，json配置文件可以放项目里，自己的网站服务器或者第三方管理平台服务器。
@@ -9,11 +9,25 @@ keymob 是一个简单易用的离线广告管理库。
 使用方法
 
 1.下载安装库文件
-   下载Keymob sdk，把KeymobAd.framework添加到Xcode工程中；
-   把keymobsdk\plugins目录下不计划使用的平台插件删除，把keymobsdk目录添加到Xcode工程
-   添加Other Linker Flag 把使用了的平台的库都添加进去，例如使用了Admob 和Inmobi则需要添加俩条  
-   -force_load $(SRCROOT)/keymobsdk/plugins/Admob/libAdmobAdapter.a
-   -force_load $(SRCROOT)/keymobsdk/plugins/inmobi/libInmobiAdapter.a
+要在手机应用里面展示广告需要在应用里面添加广告管理库，Keymob广告管理库目前的版本是20150801 下载解压后可以看到ios工程的目录结构，大部分是常规的ios工程文件和目录，下面资源是Keymob管理库相关的。 下载广告管理库
+README.md keymob 英文快速集成文档
+README_ios_zh.md keymob 中文快速集成文档
+keymobsdk
+KeymobAd.framework keymob 核心库
+plugins keymob 支持的各个平台的SDK库
+除上面下载的资源外，使用keymob官方支持的平台，无需再单独添加各个平台的代码
+
+
+添加使用广告管理库需要下面几步骤
+右击xcode工程，打开属性，选择"添加文件到工程" 菜单，把keymobsdk目录添加到Xcode工程中
+在build tab下 Other Linker Flags 值里面添加 -fore_load 项
+例如使用了Admob平台和Inmobi平台需要添加如下项。$(SRCROOT)/keymobsdk/plugins/Admob 是库路径，根据自己保存Keymob SDK的路径调整。
+
+	-force_load $(SRCROOT)/keymobsdk/plugins/Admob/libAdmobAdapter.a
+	-force_load $(SRCROOT)/keymobsdk/plugins/inmobi/libInmobiAdapter.a
+
+注意：如果不加-force_load将看不到第三方广告，提示not support platform
+
 
 2.添加 代码
   a.添加引用
@@ -125,19 +139,22 @@ h. 应用墙广告的加载和展示
 
 3.广告平台配置文件模板
 
-{
-    "isTesting":true,//是否是测试模式
-    "rateModel":1,//广告平台排序规则，0表示priority是权重，各个平台按比例显示广告，1表示priority是顺序，各个平台按顺序展示广告
-    "platforms":[
-                 {"class":"AdmobAdapter","priority":10,"key1":"ca-app-pub-xxx/xxx","key2":"ca-app-pub-xxx/xxx"},//admob 平台 ,key1 banner ID，key2全屏ID
-                 {"class":"AmazonAdapter","priority":10,"key1":"app id"},//amazon 平台 ,key1 appkey
-                 {"class":"ChartboostAdapter","priority":3,"key1":"appid ","key2":"sign"},//chartboost 平台 ,key1 appID，key2 signature
-                 {"class":"InmobiAdapter","priority":10,"key1":"property id"},//inmobi 平台 ,key1 appid 
-                 {"class":"MMediaAdapter","priority":10,"key1":"banner id","key2":"Interstitial ID"},//mmedia 平台 ,key1 banner ID，key2全屏id
-                 {"class":"KeymobAdapter","priority":10,"key1":"1"},//keymob.com 自家广告和互推功能
-                 {"class":"IadAdapter","priority":10}//iad 平台 ,android上会被自动
-                ]
-}
+	{
+		"isTesting":true,//是否是测试模式
+		"rateModel":1,//广告平台排序规则，0表示priority是权重，各个平台按比例显示广告，1表示priority是顺序，各个平台按顺序展示广告
+		"platforms":[
+		{"class":"AdmobAdapter","priority":90,"key1":"ca-app-pub-xxx/xxx","key2":"ca-app-pub-xxx/xxx"},//admob 平台 ,key1 banner ID，key2全屏id
+		{"class":"BaiduAdapter","priority":10,"key1":"apid","key2":"apsec"},//baidu platform,key1 和 key2是一样的值
+		{"class":"AmazonAdapter","priority":20,"key1":"xxx"},//amazon 平台 ,key1 appkey
+		{"class":"ChartboostAdapter","priority":40,"key1":"xxx","key2":"xxx"},//chartboost 平台 ,key1 appID，key2 signature
+		{"class":"InmobiAdapter","priority":50,"key1":"xxx"},//inmobi 平台 ,key1 appid 
+		{"class":"IadAdapter","priority":50},//iad 平台 ,android上会被自动忽略
+		{"class":"KeymobAdapter","priority":50,"key1":"appid"},//keymob.com 自售广告，交叉推广需要
+		{"class":"GDTAdapter","priority":10,"key1":"appid","key2":"banner id","param":"Interstitial ID"},//广点通广告配置
+		{"class":"AdcolonyAdapter","priority":10,"key1":"appid","key2":"zone interstitia","param":"video zone"},//Adcolony配置
+		{"class":"MMediaAdapter","priority":10,"key1":"xxx","key2":"xxx"}//mmedia 平台 ,key1 banner ID，key2全屏id
+		]
+	}
 
 priority会根据ratemodel不同而成为比重或者排序号,class表示平台实现,不能修改。
 

@@ -11,7 +11,7 @@
 #import <KeymobAd/BannerPlatformAdapter.h>
 #import "BaiduMobAdView.h"
 #import "BaiduMobAdInterstitialDelegate.h"
-
-@interface BaiduAdapter : BannerPlatformAdapter <IInterstitialPlatform,BaiduMobAdInterstitialDelegate,BaiduMobAdViewDelegate>
+#import "BaiduMobAdVideoView.h"
+@interface BaiduAdapter : BannerPlatformAdapter <IInterstitialPlatform,IVideoPlatform,BaiduMobAdVideoDelegate,BaiduMobAdInterstitialDelegate,BaiduMobAdViewDelegate>
 
 @end

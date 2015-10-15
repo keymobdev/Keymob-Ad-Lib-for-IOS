@@ -14,16 +14,12 @@
 
 @required
 /**
- *  应用在union.baidu.com上的APPID
+ *  应用的APPID
  */
 - (NSString *)publisherId;
 
 
 @optional
-/**
- *  应用在union.baidu.com上的APPID 已废弃
- */
-- (NSString*) appSpec DEPRECATED_ATTRIBUTE;
 /**
  *  启动位置信息
  */

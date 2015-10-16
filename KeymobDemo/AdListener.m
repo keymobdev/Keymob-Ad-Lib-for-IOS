@@ -10,10 +10,10 @@
 
 @implementation AdListener 
 - (void)onLoadedSuccess:(int) adtype withAdapter:(id<IPlatform>)adapter andData:(id)error{
+    if(KM_AD_TYPES_INTERSTITIAL==adtype){
+        [[AdManager sharedInstance] showInterstitial];
+    }
     NSLog(@"onLoadedSuccess%@  %d",[adapter platformName],adtype);
-if(KM_AD_TYPES_INTERSTITIAL==adtype){
- [[AdManager sharedInstance] showInterstitial];
-}
 }
 - (void)onLoadedFail:(int) adtype withAdapter:(id<IPlatform>)adapter andData:(id)error{
      NSLog(@"onLoadedFail%@ %@ %d",error,[adapter platformName],adtype);

@@ -1,10 +1,11 @@
 #import "ViewController.h"
 #import "AdListener.h"
 #import <KeymobAd/KeymobAd.h>
+//#import "InmobiAdapter.h"
 @interface ViewController ()
 {
     AdManager* adManager;
-    
+    //InmobiAdapter* adataptersss;
 }
 @end
 
@@ -19,6 +20,7 @@
    // [self configAdFromFile];
     
        [self configAdFromKeymobService];
+    [adManager loadInterstitial];
 }
 -(void) configAdFromKeymobService{
     [adManager configWithKeymobService:@"1" isTesting:YES];//if you are debugging ,set auto cache no

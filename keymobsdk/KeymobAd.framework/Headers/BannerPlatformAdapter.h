@@ -15,7 +15,7 @@
 //  NSArray *usedConstraints;
 }
 -(CGSize) bannerSize:(int)bannerType;
-- (void) initBanner:(int) sizeType;
+- (void) initBanner:(int) sizeType withController:(UIViewController*) controller;
 -(void) sendRequest:(int) sizeType;
 - (void) addAdView:(UIView*)v toParent:(UIView*) pview atPosition:(int) position  offX:(int)_x offY:(int)_y ;
 @end

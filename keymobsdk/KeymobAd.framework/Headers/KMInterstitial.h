@@ -14,6 +14,6 @@
 @property (nonatomic,strong) KMBanner *banner;
 @property (strong,nonatomic )  id <KMInterstitialDelegate> delegate;
 -(void) loadAd;
-- (void) showAd;
+- (void) showAd:(UIViewController*) controller;
 -(BOOL) isLoaded;
 @end

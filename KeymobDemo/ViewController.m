@@ -1,11 +1,8 @@
 #import "ViewController.h"
 #import "AdListener.h"
 #import <KeymobAd/KeymobAd.h>
-//#import "InmobiAdapter.h"
 @interface ViewController ()
 {
-    AdManager* adManager;
-    //InmobiAdapter* adataptersss;
 }
 @end
 
@@ -14,65 +11,58 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    [Keymob sharedInstance].webRoot=@"http://192.168.0.100/";
-    adManager=[AdManager sharedInstance];
-
-    [adManager setController:self andListener:[[AdListener alloc]init]];
+    [AdManager sharedInstance].controller=self;
+    [AdManager sharedInstance].listener=[[AdListener alloc]init];
    // [self configAdFromFile];
     
-       [self configAdFromKeymobService];
-    [adManager loadInterstitial];
+    [self configAdFromKeymobService];
+    [[AdManager sharedInstance] loadInterstitial];
 }
 -(void) configAdFromKeymobService{
-    [adManager configWithKeymobService:@"1" isTesting:YES];//if you are debugging ,set auto cache no
+    [[AdManager sharedInstance] configWithKeymobService:@"1" isTesting:YES];//if you are debugging ,set auto cache no
 }
 -(void) configAdFromFile{
     NSError* error;
     NSString* file= [[NSBundle mainBundle] pathForResource:@"ads" ofType:@"json"];
     NSString *textFileContents =[NSString stringWithContentsOfFile:file encoding:NSUTF8StringEncoding error:&error];
     NSLog(@"---------%@",textFileContents);
-    [adManager configWithJSON:textFileContents];
+    [[AdManager sharedInstance] configWithJSON:textFileContents];
 }
 -(IBAction)onClickButton:(id)sender{
-    if(adManager!=nil){
-        [adManager showRelationBanner:KM_SIZE_TYPE_BANNER atPosition:KM_BANNER_POSITIONS_TOP_CENTER withOffY:0];
-    }
+    [[AdManager sharedInstance] showRelationBanner:KM_SIZE_TYPE_BANNER atPosition:KM_BANNER_POSITIONS_TOP_CENTER withOffY:0 withController:self];
 }
 -(IBAction)onClickHide:(id)sender{
-    if(adManager!=nil){
-        [adManager removeBanner];
-    }
+        [[AdManager sharedInstance] removeBanner];
 }
 -(IBAction)onClickInterstitial:(id)sender{
-    if(adManager!=nil){
-        if([adManager isInterstitialReady]){
-            [adManager showInterstitial];
+    [AdManager sharedInstance].controller=self;
+        if([[AdManager sharedInstance] isInterstitialReady]){
+            [[AdManager sharedInstance] showInterstitialWithController:self];
         }else{
-            [adManager loadInterstitial];
+            [[AdManager sharedInstance] loadInterstitial];
         }
-    }
 }
 -(IBAction)onClickAppWall:(id)sender{
-    if(adManager!=nil){
-        if([adManager isAppWallReady]){
-            [adManager showAppWall];
+        if([[AdManager sharedInstance] isAppWallReady]){
+            [[AdManager sharedInstance] showAppWallWithController:self];
         }else{
-            [adManager loadAppWall];
+            [[AdManager sharedInstance] loadAppWall];
         }
-    }
 }
 -(IBAction)onClickVideo:(id)sender{
-    if(adManager!=nil){
-        if([adManager isVideoReady]){
-            [adManager showVideo];
+        if([[AdManager sharedInstance] isVideoReady]){
+            [[AdManager sharedInstance] showVideoWithController:self];
         }else{
-            [adManager loadVideo];
+            [[AdManager sharedInstance] loadVideo];
         }
-    }
 }
 -(IBAction)onClickABSBanner:(id)sender{
-    if(adManager!=nil){
-        [adManager showBannerABS:KM_SIZE_TYPE_BANNER atX:60 atY:40];
-    }
+        [[AdManager sharedInstance] showBannerABS:KM_SIZE_TYPE_BANNER atX:60 atY:40 withController:self];
+}
+-(IBAction)onClickGame:(id)sender{
+    UIStoryboard *gameStroyBoard=[UIStoryboard storyboardWithName:@"Game" bundle:nil];
+    UIViewController *gameController=[gameStroyBoard instantiateViewControllerWithIdentifier:@"game"];
+    [self presentViewController:gameController animated:YES completion:nil];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

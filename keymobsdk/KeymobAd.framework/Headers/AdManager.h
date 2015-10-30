@@ -19,13 +19,29 @@ struct KMBannerState {
     int yvalue;
 };
 typedef struct KMBannerState KMBannerState;
-@interface AdManager : NSObject <IAdEventListener,IBannerPlatform,IAppWallPlatform,IInterstitialPlatform,IVideoPlatform>
+
+
+@interface AdManager : NSObject <IAdEventListener,IBannerPlatform,IAppWallPlatform,IInterstitialPlatform,IVideoPlatform>{
+     UIViewController* _controller;
+}
+
 @property (nonatomic,retain) id<IAdEventListener> listener;
-@property (nonatomic,retain) UIViewController* controller;
+//@property (nonatomic,retain) UIViewController* controller;
+
 -(void) configWithConfig:(BOOL) _isTesting withRateModel:(int)_model andPlatforms:(NSArray*) _items;
 -(void) configWithJSON:(NSString*)jsonStr;
 -(void) configWithKeymobService:(NSString*) appID isTesting:(BOOL) _testing;
 //-(id) initWith:(UIViewController*) controller andListener:(id<IAdEventListener>) listener;
--(void) setController:(UIViewController*) _controller andListener:(id<IAdEventListener>) _listener;
+//-(void) setController:(UIViewController*) _controller andListener:(id<IAdEventListener>) _listener;
+
+-(void) showBannerABS:(int)sizeType atX:(int)_x atY:(int)_y;
+-(void) showRelationBanner:(int)sizeType atPosition:(int)_p withOffY:(int)_y;
+-(void) showAppWall;
+-(void) showInterstitial;
+-(void) showVideo;
+
+-(void) setController:(UIViewController *)controller;
+-(UIViewController*) controller;
+
 + (AdManager*)sharedInstance ;
 @end

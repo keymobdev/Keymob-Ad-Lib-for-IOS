@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE053F8A1BE1ED550039A4B8 /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE053F891BE1ED550039A4B8 /* Game.storyboard */; settings = {ASSET_TAGS = (); }; };
+		EE053F921BE1F0630039A4B8 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE053F911BE1F0630039A4B8 /* GameViewController.m */; settings = {ASSET_TAGS = (); }; };
 		EE30E0E81BCF3A9F0098DD87 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EE30E0E71BCF3A9F0098DD87 /* libsqlite3.tbd */; };
 		EE30E1711BCF471E0098DD87 /* KeymobAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE30E1701BCF471E0098DD87 /* KeymobAd.framework */; settings = {ASSET_TAGS = (); ATTRIBUTES = (Required, ); }; };
 		EE30E1731BCF48A20098DD87 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE30E1721BCF48A20098DD87 /* MediaPlayer.framework */; };
@@ -50,6 +52,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE053F891BE1ED550039A4B8 /* Game.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
+		EE053F901BE1F0630039A4B8 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		EE053F911BE1F0630039A4B8 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		EE30E0E71BCF3A9F0098DD87 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		EE30E1701BCF471E0098DD87 /* KeymobAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeymobAd.framework; path = /Users/li_li_li87222/Desktop/keymob/KeymobDemo/keymobsdk/KeymobAd.framework; sourceTree = "<absolute>"; };
 		EE30E1721BCF48A20098DD87 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -315,6 +320,9 @@
 				EEE01C121B0DA90B00369AD1 /* AdListener.h */,
 				EEE01C131B0DA90B00369AD1 /* AdListener.m */,
 				EE57D6111B0F67DC00A86DA1 /* ads.json */,
+				EE053F891BE1ED550039A4B8 /* Game.storyboard */,
+				EE053F901BE1F0630039A4B8 /* GameViewController.h */,
+				EE053F911BE1F0630039A4B8 /* GameViewController.m */,
 			);
 			path = KeymobDemo;
 			sourceTree = "<group>";
@@ -359,7 +367,6 @@
 				TargetAttributes = {
 					EE629FF21AF24B6C00267D13 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 57W66QZCMN;
 					};
 				};
 			};
@@ -389,6 +396,7 @@
 				EE57D6121B0F6CAA00A86DA1 /* ads.json in Resources */,
 				EE62A0021AF24B6C00267D13 /* Main.storyboard in Resources */,
 				EE62A0071AF24B6C00267D13 /* LaunchScreen.xib in Resources */,
+				EE053F8A1BE1ED550039A4B8 /* Game.storyboard in Resources */,
 				EE62A0041AF24B6C00267D13 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE053F921BE1F0630039A4B8 /* GameViewController.m in Sources */,
 				EE629FFF1AF24B6C00267D13 /* ViewController.m in Sources */,
 				EE629FFC1AF24B6C00267D13 /* AppDelegate.m in Sources */,
 				EEE01C141B0DA90B00369AD1 /* AdListener.m in Sources */,
@@ -526,7 +535,7 @@
 					"$(PROJECT_DIR)/keymobsdk/plugins/Adcolony",
 				);
 				INFOPLIST_FILE = KeymobDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -557,7 +566,7 @@
 					"-ObjC",
 					"-lstdC++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "so.phonegame.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.keymob.KeymobDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -580,7 +589,7 @@
 					"$(PROJECT_DIR)/keymobsdk/plugins/Adcolony",
 				);
 				INFOPLIST_FILE = KeymobDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -611,7 +620,7 @@
 					"-ObjC",
 					"-lstdC++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "so.phonegame.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.keymob.KeymobDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

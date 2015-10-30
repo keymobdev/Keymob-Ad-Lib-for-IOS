@@ -11,23 +11,23 @@
 @implementation AdListener 
 - (void)onLoadedSuccess:(int) adtype withAdapter:(id<IPlatform>)adapter andData:(id)error{
     if(KM_AD_TYPES_INTERSTITIAL==adtype){
-        [[AdManager sharedInstance] showInterstitial];
+       [[AdManager sharedInstance] showInterstitial];
     }
-    NSLog(@"onLoadedSuccess%@  %d",[adapter platformName],adtype);
+    NSLog(@"onLoadedSuccess %@  %d",[adapter platformName],adtype);
 }
 - (void)onLoadedFail:(int) adtype withAdapter:(id<IPlatform>)adapter andData:(id)error{
-     NSLog(@"onLoadedFail%@ %@ %d",error,[adapter platformName],adtype);
+     NSLog(@"onLoadedFail %@ %@ %d",error,[adapter platformName],adtype);
 }
 - (void)onAdOpened:(int) adtype withAdapter:(id<IPlatform>)adapter andData:(id)error{
-    NSLog(@"onAdOpened%@ %@ %d",error,[adapter platformName],adtype);
+    NSLog(@"onAdOpened %@ %@ %d",error,[adapter platformName],adtype);
 }
 - (void)onAdClosed:(int) adtype withAdapter:(id<IPlatform>)adapter andData:(id)error{
-    NSLog(@"onAdClosed%@ %@ %d",error,[adapter platformName],adtype);
+    NSLog(@"onAdClosed %@ %@ %d",error,[adapter platformName],adtype);
 }
 - (void)onAdClicked:(int) adtype withAdapter:(id<IPlatform>)adapter andData:(id)error{
-    NSLog(@"onAdClicked%@ %@ %d",error,[adapter platformName],adtype);
+    NSLog(@"onAdClicked %@ %@ %d",error,[adapter platformName],adtype);
 }
 - (void)onOtherEvent:(int) adtype withAdapter:(id<IPlatform>)adapter andData:(id)error eventName:(NSString*)_eventName{
-    NSLog(@"onOtherEvent%@ %@ %d",error,[adapter platformName],adtype);
+    NSLog(@"onOtherEvent %@ %@ %d",error,[adapter platformName],adtype);
 }
 @end

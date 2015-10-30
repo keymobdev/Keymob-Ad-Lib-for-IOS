@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <KeymobAd/AdManager.h>
 #import <KeymobAd/PlatformConfigItem.h>
+#import <KeymobAd/BannerPlatformAdapter.h>
 #import <KeymobAd/IAdEventListener.h>
 #import <KeymobAd/PlatformAdapter.h>

@@ -53,33 +53,33 @@ static NSString* EVENT_ON_OTHER_EVENT=@"onOtherEvent" ;
 @protocol IPlatform
 
 
--(void) initPlatform:(UIViewController*) controller withKey1:(NSString*) key1 withKey2:(NSString*) key2 andParam:(NSString*) param;
+-(void) initPlatformWithKey1:(NSString*) key1 withKey2:(NSString*) key2 andParam:(NSString*) param;
 -(NSString*) platformName;
 @end
 
 @protocol IAppWallPlatform
 -(void) loadAppWall;
 -(BOOL) isAppWallReady;
--(void) showAppWall;
+-(void) showAppWallWithController:(UIViewController*) controller;
 @end
 
 
 @protocol IInterstitialPlatform
 -(void) loadInterstitial;
 -(BOOL) isInterstitialReady;
--(void) showInterstitial;
+-(void) showInterstitialWithController:(UIViewController*) controller;
 @end
 
 
 @protocol IVideoPlatform
 -(void) loadVideo;
 -(BOOL) isVideoReady;
--(void) showVideo;
+-(void) showVideoWithController:(UIViewController*) controller;
 @end
 
 @protocol IBannerPlatform
--(void) showBannerABS:(int)sizeType atX:(int)_x atY:(int)_y;
--(void) showRelationBanner:(int)sizeType atPosition:(int)_p withOffY:(int)_y;
+-(void) showBannerABS:(int)sizeType atX:(int)_x atY:(int)_y withController:(UIViewController*) controller;
+-(void) showRelationBanner:(int)sizeType atPosition:(int)_p withOffY:(int)_y withController:(UIViewController*) controller;
 -(void) removeBanner;
 @end
 

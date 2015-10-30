@@ -39,7 +39,8 @@ Before using keymob, first import keymob related header files. Most of the core 
   
 ####  b.Setup and initialize keymob
 ```
-[[AdManager sharedInstance] setController: self andListener: [[AdListener alloc] init]];
+[AdManager sharedInstance].controller=self;
+[AdManager sharedInstance].listener=[[AdListener alloc] init];
 ```
 Set advertising display container and advertising event delegate, the first parameter is the context controller, the second argument is advertising delegate.
 Then set up ad ID information of each advertising platform, there are two settings Keymob advertising messages ways, by json profile settings file
@@ -58,7 +59,7 @@ The first parameter is the application ID, obtained from the www.keymob.com, the
 
 #### c. Display banner advertising
 ```
-	[[AdManager sharedInstance] showRelationBanner:BANNER_SIZE_BANNER atPosition:BANNER_POSITIONS_BOTTOM_CENTER withOffY:80];
+	[[AdManager sharedInstance] showRelationBanner:KM_SIZE_TYPE_BANNER atPosition:KM_BANNER_POSITIONS_TOP_CENTER withOffY:0 withController:self];
 ```
 The above means that displays the standard banner ad at the bottom of the device . The first parameter is the ad size, the type size can be const named BANNER_SIZE_XXX, including the standard banner, rectange banner, smart banner and so on.<br/>
   Other banner size outside  standard size(320*50) may have  small differences in the different platforms, run to see the effects.<br/>
@@ -67,7 +68,7 @@ The above means that displays the standard banner ad at the bottom of the device
  
 ####  d. display banner at Fixed location
 ```	
-	[[AdManager sharedInstance] showBannerABS:BANNER_SIZE_BANNER atX:10 atY:200];
+	[[AdManager sharedInstance] showBannerABS:KM_SIZE_TYPE_BANNER atX:60 atY:40 withController:self];
 ```
 The above code is display standard banner at point(0,200)<br/>
      Although the relative positioning to meet the needs of the majority of advertising location settings, but to meet the needs of some special position, keymob provides absolute fixed position display banner advertising api.<br/>
@@ -96,7 +97,7 @@ The above code is display standard banner at point(0,200)<br/>
     So make sure the Interstitial is ready before every show.Below is the overall look.
 ```
    	if([[AdManager sharedInstance] isInterstitialReady]){
-		[[AdManager sharedInstance] showInterstitial];
+		[[AdManager sharedInstance] showInterstitialWithController:self];
 	}
 ```
 
@@ -117,7 +118,7 @@ The above code is display standard banner at point(0,200)<br/>
     So make sure the video is ready before every show.Below is the overall look.
 ```
    	if([[AdManager sharedInstance] isVideoReady]){
-		[[AdManager sharedInstance] showVideo];
+		[[AdManager sharedInstance] showVideoWithController:self];
 	}
 ```
 ####  h. Application load and display more app advertising
@@ -137,7 +138,7 @@ The above code is display standard banner at point(0,200)<br/>
     So make sure the More App is ready before every show.Below is the overall look.
 ```
    	if([[AdManager sharedInstance] isAppWallReady]){
-		[[AdManager sharedInstance] showAppWall];
+		[[AdManager sharedInstance] showAppWallWithController:self];
 	}
 ```
 

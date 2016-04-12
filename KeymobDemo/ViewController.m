@@ -10,13 +10,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [Keymob sharedInstance].webRoot=@"http://192.168.0.100/";
     [AdManager sharedInstance].controller=self;
     [AdManager sharedInstance].listener=[[AdListener alloc]init];
    // [self configAdFromFile];
     
     [self configAdFromKeymobService];
-    [[AdManager sharedInstance] loadInterstitial];
+      [[AdManager sharedInstance] showRelationBanner:KM_SIZE_TYPE_FULL_BANNER atPosition:KM_BANNER_POSITIONS_BOTTOM_CENTER withOffY:0 withController:self];
+    //[[AdManager sharedInstance] loadInterstitial];
 }
 -(void) configAdFromKeymobService{
     [[AdManager sharedInstance] configWithKeymobService:@"1" isTesting:YES];//if you are debugging ,set auto cache no
@@ -57,7 +57,7 @@
         }
 }
 -(IBAction)onClickABSBanner:(id)sender{
-        [[AdManager sharedInstance] showBannerABS:KM_SIZE_TYPE_BANNER atX:60 atY:40 withController:self];
+        [[AdManager sharedInstance] showBannerABS:KM_SIZE_TYPE_LEADERBOARD atX:0 atY:280 withController:self];
 }
 -(IBAction)onClickGame:(id)sender{
     UIStoryboard *gameStroyBoard=[UIStoryboard storyboardWithName:@"Game" bundle:nil];

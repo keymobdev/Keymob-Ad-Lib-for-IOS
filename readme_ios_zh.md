@@ -39,7 +39,8 @@ plugins keymob 支持的各个平台的SDK库
   
  b.设置和初始化各个广告平台信息
 
-	[[AdManager sharedInstance] setController:self andListener:[[AdListener alloc]init]];
+	[AdManager sharedInstance].controller=self;
+        [AdManager sharedInstance].listener=[[AdListener alloc]init];
 
 	设置广告显示的容器和广告事件处理代理，第一个参数是controller上下文，第二个参数是广告处理代理类
 	然后再设置各个广告平台的广告ID信息，设置Keymob广告信息有俩种方法，通过json配置文件设置
@@ -55,7 +56,7 @@ plugins keymob 支持的各个平台的SDK库
 
  c. banner广告的展示 
 
-	[[AdManager sharedInstance] showRelationBanner:BANNER_SIZE_BANNER atPosition:BANNER_POSITIONS_BOTTOM_CENTER withOffY:80];
+	[[AdManager sharedInstance] showRelationBanner:KM_SIZE_TYPE_BANNER atPosition:KM_BANNER_POSITIONS_TOP_CENTER withOffY:0 withController:self];
 
     上面的意思是在设备的底部显示显示标准banner广告。
     第一个参数是广告尺寸，尺寸是以BANNER_SIZE_XXX命名的常量列表，包括标准banner，方块，smart banner等。
@@ -65,7 +66,7 @@ plugins keymob 支持的各个平台的SDK库
  
  d. 固定位置展示banner
 	
-	[[AdManager sharedInstance] showBannerABS:BANNER_SIZE_BANNER atX:10 atY:200];
+	   [[AdManager sharedInstance] showBannerABS:KM_SIZE_TYPE_LEADERBOARD atX:0 atY:280 withController:self];
 
     上面是在x 10,y 200位置展示标准banner
     虽然相对定位能满足大部分的广告位置设置需求，但为满足某些特殊位置的需要，keymob提供了绝对固定位置展示banner广告的接口。
@@ -84,7 +85,7 @@ plugins keymob 支持的各个平台的SDK库
    加载全屏广告，广告加载成功后不会自动展示，这样能更好的控制全屏广告在合适的时机展示给用户，
    如果要在加载成功时立即展示可以在 eventlistener的 onLoadedSuccess事件中调用showInterstitial展示广告。
 
-	[[AdManager sharedInstance] showInterstitial];
+	 [[AdManager sharedInstance] showInterstitialWithController:self];
 
    展示全屏广告，调用showInterstitial后广告会立即出现。但是请保证广告已经加载完成。
 
@@ -94,7 +95,7 @@ plugins keymob 支持的各个平台的SDK库
    所以每次展示前都需要判断是否加载完成。整体就是下面的样子。
 
    	if([[AdManager sharedInstance] isInterstitialReady]){
-		[[AdManager sharedInstance] showInterstitial];
+		 [[AdManager sharedInstance] showInterstitialWithController:self];
 	}
 
 g. 视频广告的加载和展示
@@ -104,7 +105,7 @@ g. 视频广告的加载和展示
    加载视频广告，广告加载成功后不会自动展示，这样能更好的控制视频广告在合适的时机展示给用户，
    如果要在加载成功时立即展示可以在 eventlistener的 onLoadedSuccess事件中调用showVideo展示广告。
 
-	[[AdManager sharedInstance] showVideo];
+	[[AdManager sharedInstance] showVideoWithController:self];
 
    展示视频广告，调用showVideo后广告会立即出现。但是请保证广告已经加载完成。
 
@@ -114,7 +115,7 @@ g. 视频广告的加载和展示
    所以每次展示前都需要判断是否加载完成。片段如下面的样子。
 
    	if([[AdManager sharedInstance] isVideoReady]){
-		[[AdManager sharedInstance] showVideo];
+		[[AdManager sharedInstance] showVideoWithController:self];
 	}
 
 h. 应用墙广告的加载和展示
@@ -124,7 +125,7 @@ h. 应用墙广告的加载和展示
    加载应用墙广告，广告加载成功后不会自动展示，这样能更好的控制应用墙广告在合适的时机展示给用户，
    如果要在加载成功时立即展示可以在 eventlistener的 onLoadedSuccess事件中调用showAppWall展示广告。
 
-	[[AdManager sharedInstance] showAppWall];
+	[[AdManager sharedInstance] showAppWallWithController:self];
 
    展示应用墙广告，调用showAppWall后广告会立即出现。但是请保证应用墙广告已经加载完成。
 
@@ -134,7 +135,7 @@ h. 应用墙广告的加载和展示
    所以每次展示前都需要判断是否加载完成。片段如下面的样子。
 
    	if([[AdManager sharedInstance] isAppWallReady]){
-		[[AdManager sharedInstance] showAppWall];
+		[[AdManager sharedInstance] showAppWallWithController:self];
 	}
 
 

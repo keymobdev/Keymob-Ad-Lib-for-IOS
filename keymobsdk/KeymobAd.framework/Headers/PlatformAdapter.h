@@ -14,10 +14,10 @@
     
     NSString* key1;
     NSString* key2;
-    NSString* dic;
+    NSString* paramString;
 }
 @property (nonatomic, retain) id<IAdEventListener> listener;
 @property (nonatomic,assign) BOOL isTesting;
 //@property  UIViewController* controller;
--(NSArray*) resetKeys:(NSString*)_key1 withKey2:(NSString*) _key2 withKey3:(NSString*) _key3 withMD:(int) md5;
+-(void) resetKeys:(NSString*)_key1 withKey2:(NSString*) _key2 withKey3:(NSString*) _key3 withMD:(int) md5;
 @end

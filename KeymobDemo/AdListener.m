@@ -28,6 +28,6 @@
     NSLog(@"onAdClicked %@ %@ %d",error,[adapter platformName],adtype);
 }
 - (void)onOtherEvent:(int) adtype withAdapter:(id<IPlatform>)adapter andData:(id)error eventName:(NSString*)_eventName{
-    NSLog(@"onOtherEvent %@ %@ %d",error,[adapter platformName],adtype);
+    NSLog(@"onOtherEvent eventName:%@ error:%@ adapter:%@  adtype:%d",_eventName,error,[adapter platformName],adtype);
 }
 @end

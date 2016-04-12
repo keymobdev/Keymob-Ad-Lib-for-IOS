@@ -87,7 +87,7 @@ The above code is display standard banner at point(0,200)<br/>
    Load Interstitial ads, does not automatically show after load successfully, this can better control Interstitial ad at the right time to show to the user,<br/>
     If you want to show immediate after load,just handler onLoadedSuccess  in eventListener and call showInterstitial.<br/>
 ```
-	[[AdManager sharedInstance] showInterstitial];
+	[[AdManager sharedInstance] showInterstitialWithController:self];
 ```
    Display Interstitial advertising, ads will appear immediately after the call showInterstitial. However, please ensure that advertising has finished loading.
 ```
@@ -108,7 +108,7 @@ The above code is display standard banner at point(0,200)<br/>
   Load video ads, does not automatically show after load successfully, this can better control video ad at the right time to show to the user,<br/>
     If you want to show immediate after load,just handler onLoadedSuccess  in eventListener and call showVideo.
 ```
-	[[AdManager sharedInstance] showVideo];
+	[[AdManager sharedInstance] showVideoWithController:self];
 ```
    Display video ads, ads will appear immediately after the call showVideo. However, please ensure that advertising has finished loading.
 ```
@@ -128,7 +128,7 @@ The above code is display standard banner at point(0,200)<br/>
    Load more app ads, does not automatically show after load successfully, this can better control video ad at the right time to show to the user,<br/>
     If you want to show immediate after load,just handler onLoadedSuccess  in eventListener and call showAppWall.
 ```
-	[[AdManager sharedInstance] showAppWall];
+	[[AdManager sharedInstance] showAppWallWithController:self];
 ```
    Display more app ads, ads will appear immediately after the call showAppWall. However, please ensure that advertising has finished loading.
 ```

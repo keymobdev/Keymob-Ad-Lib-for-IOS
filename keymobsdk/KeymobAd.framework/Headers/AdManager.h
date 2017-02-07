@@ -21,7 +21,7 @@ struct KMBannerState {
 typedef struct KMBannerState KMBannerState;
 
 
-@interface AdManager : NSObject <IAdEventListener,IBannerPlatform,IAppWallPlatform,IInterstitialPlatform,IVideoPlatform>{
+@interface AdManager : NSObject <IAdEventListener,IBannerPlatform,IAppWallPlatform,IInterstitialPlatform,IVideoPlatform,NSURLSessionDelegate>{
      UIViewController* _controller;
 }
 

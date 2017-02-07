@@ -14,7 +14,7 @@
 @class KMRequest;
 @class KMResponse;
 
-@interface KMBanner : UIView <UIWebViewDelegate>
+@interface KMBanner : UIView <UIWebViewDelegate,NSURLSessionDelegate>
 
 @property (strong,nonatomic )  id <KMBannerDelegate> delegate;
 @property(nonatomic,strong) KMResponse *response;

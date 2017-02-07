@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <KeymobAd/IPlatform.h>
 #import <KeymobAd/BannerPlatformAdapter.h>
-#import "BaiduMobAdView.h"
-#import "BaiduMobAdInterstitialDelegate.h"
-#import "BaiduMobAdVideoView.h"
-@interface BaiduAdapter : BannerPlatformAdapter <IInterstitialPlatform,IVideoPlatform,BaiduMobAdVideoDelegate,BaiduMobAdInterstitialDelegate,BaiduMobAdViewDelegate>
+#import <BaiduMobAdSDK/BaiduMobAdView.h>
+//#import "BaiduMobAdView.h"
+#import <BaiduMobAdSDK/BaiduMobAdInterstitialDelegate.h>
+//#import "BaiduMobAdInterstitialDelegate.h"
+//#import "BaiduMobAdVideoView.h"
+@interface BaiduAdapter : BannerPlatformAdapter <IInterstitialPlatform,BaiduMobAdInterstitialDelegate,BaiduMobAdViewDelegate>
 
 @end

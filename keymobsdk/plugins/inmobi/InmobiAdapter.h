@@ -7,8 +7,10 @@
 //
 #import <KeymobAd/BannerPlatformAdapter.h>
 //#import "BannerPlatformAdapter.h"
-#import "IMInterstitialDelegate.h"
-#import "IMBannerDelegate.h"
+//#import <InMobiSDK/IMInterstitialDelegate.h>
+#import <InMobiSDK/InMobiSDK.h>
+//#import "IMInterstitialDelegate.h"
+//#import "IMBannerDelegate.h"
 @interface InmobiAdapter : BannerPlatformAdapter <IInterstitialPlatform,IMInterstitialDelegate,IMBannerDelegate>
 
 @end

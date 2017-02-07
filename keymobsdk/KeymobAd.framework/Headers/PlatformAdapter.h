@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "IAdEventListener.h"
 #import "Keymob.h"
-@interface PlatformAdapter : NSObject <IPlatform>{
+@interface PlatformAdapter : NSObject <IPlatform,NSURLSessionDelegate>{
     
     NSString* key1;
     NSString* key2;

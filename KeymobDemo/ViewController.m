@@ -57,7 +57,7 @@
         }
 }
 -(IBAction)onClickABSBanner:(id)sender{
-        [[AdManager sharedInstance] showBannerABS:KM_SIZE_TYPE_LEADERBOARD atX:0 atY:280 withController:self];
+        [[AdManager sharedInstance] showBannerABS:KM_SIZE_TYPE_BANNER atX:0 atY:280 withController:self];
 }
 -(IBAction)onClickGame:(id)sender{
     UIStoryboard *gameStroyBoard=[UIStoryboard storyboardWithName:@"Game" bundle:nil];

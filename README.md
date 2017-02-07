@@ -10,7 +10,7 @@ Ad config can been managed in  www.keymob.com ,  modify and adjust easy, you can
 ## Usage
 
 ### 1. Download and install the library files
-To show ads on mobile application which needs to  added ad library in the application, the current version of Keymob advertisement  library is 20150801 . Keymob library is an ios project, most of it are  general ios project files, the following resources are Keymob related resources.
+To show ads on mobile application which needs to  added ad library in the application, the current version of Keymob advertisement  library is 20170201 . Keymob library is an ios project, most of it are  general ios project files, the following resources are Keymob related resources.
 * README.md keymob English quickly integrate document
 * README_ios_zh.md keymob Chinese quickly integrate document
 * keymobsdk\KeymobAd.framework keymob core libraries
